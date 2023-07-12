@@ -1,0 +1,45 @@
+@use "./reset";
+
+#todo {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.todo__title {
+    display: none;
+    h2 {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+}
+
+.todo {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+    &__card {
+        display: grid;
+        grid-template-columns: 15fr 1fr;
+        padding: 12px 24px;
+        align-items: center;
+        gap: 50px;
+        justify-content: space-between;
+        background-color: #ffffff;
+        border-radius: 8px;
+        p {
+            text-align: center;
+        }
+    }
+}
+
+.green {
+    color: green;
+}
+
+.green, .red {
+    font-size: 20px;
+}
+
+.red {
+    color: red;
+}

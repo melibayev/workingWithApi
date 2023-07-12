@@ -1,0 +1,52 @@
+@use "./reset";
+
+#photo {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.photo__title {
+    display: none;
+    h2 {
+        font-size: 48px;
+        margin-bottom: 24px;
+    }
+}
+
+.photo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    &__card{
+        background-color: #FFFFFF;
+        cursor: pointer;
+    }
+    &__img {
+        img {
+            width: 100%;
+        }
+    }
+    &__info {
+        width: 100%;
+        padding: 10px 20px;
+        background-color: #FFFFFF;
+    }
+}
+
+@media (max-width: 1300px) {
+    .photo {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 1000px) {
+    .photo {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 12px;
+    }
+}
+@media (max-width: 550px) {
+    
+    .photo {
+        grid-template-columns: 1fr;
+    }
+}
